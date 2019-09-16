@@ -16,7 +16,11 @@ public class ProblemSet1 {
     
     public static void main(String[] args) {
         
-        
+        final double LENGTH = 11 ;
+        final double WIDTH = 8.5 ;
+        final double CONVERSIONmm = 25.4 ;
+        final double CONVERSIONcm = 2.54;
+
         /*
          * Exercise 1.
          * 
@@ -24,6 +28,14 @@ public class ProblemSet1 {
          */
         
         
+    
+        double LENGTHmm = LENGTH * CONVERSIONmm ;
+        double WIDTHmm = WIDTH * CONVERSIONmm ;
+        double AREAmm = LENGTHmm * WIDTHmm ;
+       
+
+        
+       System.out.printf("%,.2f square millimeters. \n", AREAmm );
         
         /*
          * Exercise 2.
@@ -31,7 +43,14 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
         
+        double LENGTHcm = LENGTH * CONVERSIONcm;
+        double WIDTHcm = WIDTH * CONVERSIONcm;
+        double PERIMETER = LENGTHcm + LENGTHcm + WIDTHcm + WIDTHcm;
+
         
+
+        
+       System.out.printf("%,.2f centimeters. \n", PERIMETER );
         
         /*
          * Exercise 3.
@@ -40,7 +59,13 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
         
+        double DIAGONAL = Math.hypot(LENGTH, WIDTH);
+
+
         
+
+        
+       System.out.printf("%,.2f inches. \n", DIAGONAL );
 
         /*
          * Exercise 4.
