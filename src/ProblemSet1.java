@@ -20,9 +20,8 @@ public class ProblemSet1 {
         final double WIDTH = 8.5 ;
         final double CONVERSIONmm = 25.4 ;
         final double CONVERSIONcm = 2.54;
-        final double quizWeight = .35;
-        final double homeworkWeight = .15;
-        final double testWeight = .5;
+        
+      
 
         /*
          * Exercise 1.
@@ -46,6 +45,8 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
         
+        final double CONVERSIONcm = 2.54;
+
         double LENGTHcm = LENGTH * CONVERSIONcm;
         double WIDTHcm = WIDTH * CONVERSIONcm;
         double PERIMETER = LENGTHcm + LENGTHcm + WIDTHcm + WIDTHcm;
@@ -77,6 +78,10 @@ public class ProblemSet1 {
          * what marking period grade will I get?
          */
         
+        final double quizWeight = .35;
+        final double homeworkWeight = .15;
+        final double testWeight = .5;
+
         int homework1 = 88;
         int homework2 = 91;
         int homework3 = 0;
@@ -102,7 +107,13 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
+        final double hourlyWage = 12.50;
+
+        double hoursWorked = 7.5+8+10.5+9.5+6+11.5;
+        double wageThisWeek = hoursWorked * hourlyWage;        
+
         
+        System.out.printf("$%,.2f \n", wageThisWeek );
         
         /*
          * Exercise 6.
@@ -110,7 +121,25 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
         
+
+        //SYNTAX IS ALL GOOD THE ONLY PART MISSING IS THE MATH
+
+        double federalTax = .240;
+        double stateTax = .0637;
+        double FourZeroOneK = .070;
+        double salaryYearly = 117000;
+
+
+        double afterFourZeroOneK =  (1.000 - FourZeroOneK) * salaryYearly ;
+        double takeHomePay = afterFourZeroOneK * (1-federalTax);
+        takeHomePay = takeHomePay * (1-stateTax);
+        takeHomePay= takeHomePay / 24;
+
+
+    
+
         
+       System.out.printf("$%,.2f \n", takeHomePay );
         
         /*
          * Exercise 7.
