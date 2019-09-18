@@ -20,6 +20,9 @@ public class ProblemSet1 {
         final double WIDTH = 8.5 ;
         final double CONVERSIONmm = 25.4 ;
         final double CONVERSIONcm = 2.54;
+        final double quizWeight = .35;
+        final double homeworkWeight = .15;
+        final double testWeight = .5;
 
         /*
          * Exercise 1.
@@ -84,7 +87,13 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
         
-        
+        double allHomeworks = (homework1 + homework2 + homework3)/ 3.00 * homeworkWeight;
+        double allQuizzes = (quiz1 + quiz2 + quiz3 ) / 3.00 * quizWeight;
+        double allTests = (test1 +test2 + test3)/ 3.00 * testWeight;
+
+        double grade = allHomeworks + allQuizzes + allTests;
+
+        System.out.printf("%,.2f%% \n", grade );
         
         /*
          * Exercise 5.
