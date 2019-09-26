@@ -37,7 +37,7 @@ public class ProblemSet1 {
        
 
         
-       System.out.printf("%,.2f square millimeters. \n", AREAmm );
+       System.out.printf("\n%,.2f square millimeters. \n\n", AREAmm );
         
         /*
          * Exercise 2.
@@ -45,7 +45,7 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
         
-        final double CONVERSIONcm = 2.54;
+        
 
         double LENGTHcm = LENGTH * CONVERSIONcm;
         double WIDTHcm = WIDTH * CONVERSIONcm;
@@ -54,7 +54,7 @@ public class ProblemSet1 {
         
 
         
-       System.out.printf("%,.2f centimeters. \n", PERIMETER );
+       System.out.printf("%,.2f centimeters. \n\n", PERIMETER );
         
         /*
          * Exercise 3.
@@ -69,7 +69,7 @@ public class ProblemSet1 {
         
 
         
-       System.out.printf("%,.2f inches. \n", DIAGONAL );
+       System.out.printf("%,.2f inches. \n\n", DIAGONAL );
 
         /*
          * Exercise 4.
@@ -98,7 +98,7 @@ public class ProblemSet1 {
 
         double grade = allHomeworks + allQuizzes + allTests;
 
-        System.out.printf("%,.2f%% \n", grade );
+        System.out.printf("%,.2f%% \n\n", grade );
         
         /*
          * Exercise 5.
@@ -113,7 +113,7 @@ public class ProblemSet1 {
         double wageThisWeek = hoursWorked * hourlyWage;        
 
         
-        System.out.printf("$%,.2f \n", wageThisWeek );
+        System.out.printf("$%,.2f \n\n", wageThisWeek );
         
         /*
          * Exercise 6.
@@ -139,7 +139,7 @@ public class ProblemSet1 {
     
 
         
-       System.out.printf("$%,.2f \n", takeHomePay );
+       System.out.printf("$%,.2f \n\n", takeHomePay );
         
         /*
          * Exercise 7.
@@ -160,7 +160,7 @@ public class ProblemSet1 {
 
 
         
-       System.out.printf("%,.0f buses are needed, with %,.0f passengers on the last bus. \n", numberBuses, lastBus );
+       System.out.printf("%,.0f buses are needed, with %,.0f passengers on the last bus. \n\n", numberBuses, lastBus );
         
         /*
          * Exercise 8.
@@ -175,7 +175,9 @@ public class ProblemSet1 {
 
         double allBoardArea = boardLength * boardWidth;
         double holeArea =  Math.PI * Math.pow(holeDiameter /2 , 2);
-        double
+        double totalBoard = allBoardArea - holeArea;
+        System.out.printf("%,.2f degrees.\n\n", totalBoard);
+
 
         
         /*
@@ -184,7 +186,15 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
         
-        
+        int year1 = 2020;
+        int year2 = 2100;
+        int year3 = 2400;
+        boolean year2020 = ((year1%4==0) && (year1%100!=0)) || (year1%400==0);
+        System.out.println(year1 + " is a leap year..." + year2020 + ".");
+        boolean year2100 = ((year2%4==0) && (year2%100!=0)) || (year2%400==0);
+        System.out.println(year2 + " is a leap year..." + year2100 + ".");
+        boolean year2400 = ((year1%4==0) && (year3%100!=0)) || (year3%400==0);
+        System.out.println(year3 + " is a leap year..." + year2400 + ".\n");
         
         /*
          * Exercise 10.
@@ -192,7 +202,8 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
         
-        
+        double windChill = 35.74 + (0.6215*38) + ((0.4275*38) - 35.75) * Math.pow(14, 0.16);
+        System.out.printf("%.1f degrees.\n\n", windChill);
         
     }
 }
